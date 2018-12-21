@@ -1,0 +1,29 @@
+﻿@model MOVO.Products.Models.ProductViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Product with specified name</title>
+</head>
+<body>
+<div>
+    @{
+        if (Model != null) {
+            <span>@Model.ArticleNumber</span>
+            <br/>
+            <span>@Model.Category - @Model.Price (@Model.PriceWithVat with VAT)</span>
+            <br/>
+            <span>@Model.ArticleName</span>
+            <br/>
+            <span>@Model.Description</span>
+        }
+        else {
+            <div>
+                <p>Product with specified name is not available!</p>
+            </div>
+        }
+    }
+</div>
+</body>
+</html>
