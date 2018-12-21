@@ -13,25 +13,22 @@
 <body>
 <div>
     @{
-        if (Model.Any())
-        {
-            foreach (var product in Model)
-            {
+        if (Model.Any()) {
+            foreach (var product in Model) {
                 <div>
                     <span>@product.ArticleNumber</span>
-                    <br />
+                    <br/>
                     <span>@product.Category - @product.Price (@product.PriceWithVat with VAT)</span>
-                    <br />
+                    <br/>
                     <span>@product.ArticleName</span>
-                    <br />
+                    <br/>
                     <span>@product.Description</span>
                 </div>
-                <br />
-                <br />
+                <br/>
+                <br/>
             }
         }
-        else
-        {
+        else {
             <div>
                 <p>No products available!</p>
             </div>

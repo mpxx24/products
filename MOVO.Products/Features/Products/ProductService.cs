@@ -28,7 +28,7 @@ namespace MOVO.Products.Features.Products {
                     : this.ConvertProductsToDtoses(productsFromCategory);
             }
             catch (Exception e) {
-                //this.logger.Debug($"Failed to retrieve products from category '{category}'! {e}")
+                this.logger.Debug($"Failed to retrieve products from category '{category}'! {e}");
                 throw;
             }
         }
